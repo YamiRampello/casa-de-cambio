@@ -3,7 +3,37 @@ html {
   height: 100%;
 }
 
-h1 {
+.titulos {
   background-color: rgb(194, 154, 154);
+  text-align: center;
+}
+
+.boton {
+  width: 200px;
+}
+
+#datos-solicitados,
+.texto-monedas {
+  text-align: left;
   font-size: large;
+}
+
+#lista-monedas {
+  display: block;
+  flex-direction: row;
+  text-align: left;
+  columns: 4;
+}
+
+#lista-datos {
+  display: block;
+  flex-direction: row;
+  text-align: left;
+  columns: 2;
+  font-size: 90%;
+}
+
+#opciones-monedas {
+  font-size: small;
+  display: inline;
 }
