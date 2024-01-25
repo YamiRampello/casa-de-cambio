@@ -1,4 +1,4 @@
-const URL = 'http://172.18.120.22:8080/';
+const URL = 'http://192.168.0.25:8080/';
 
 context('Interfaz para la API casa de cambio', () => {
   before(() => {
@@ -26,7 +26,7 @@ context('Interfaz para la API casa de cambio', () => {
 
     it('se asegura que los tipos de cambio no esten visibles', () => {
       cy.visit(URL);
-      cy.get('#lista-datos').should('not.be.visible');
+      cy.get('#lista-moneda-fecha-solicitado').should('not.be.visible');
     });
 
     it('se asegura que al hacer click al boton muestre monedas', () => {
@@ -37,8 +37,8 @@ context('Interfaz para la API casa de cambio', () => {
 
     it('se asegura que al hacer click al boton muestre los cambios', () => {
       cy.visit(URL);
-      cy.get('#buscar-datos').click();
-      cy.get('#lista-datos').find('li').should('be.visible');
+      cy.get('#buscar-tipos-de-cambio').click();
+      cy.get('#lista-moneda-fecha-solicitado').find('li').should('be.visible');
     });
   });
 });
