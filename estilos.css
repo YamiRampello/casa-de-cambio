@@ -12,7 +12,7 @@ html {
   width: 200px;
 }
 
-#datos-solicitados,
+#moneda-fecha-solicitados,
 .texto-monedas {
   text-align: left;
   font-size: large;
@@ -25,7 +25,7 @@ html {
   columns: 4;
 }
 
-#lista-datos {
+#lista-moneda-fecha-solicitado {
   display: block;
   flex-direction: row;
   text-align: left;

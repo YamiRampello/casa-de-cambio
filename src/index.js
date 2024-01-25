@@ -18,7 +18,7 @@ $opcionesMoneda.onclick = function () {
     });
 };
 
-const $buscarDatos = document.querySelector('#buscar-datos');
+const $buscarDatos = document.querySelector('#buscar-tipos-de-cambio');
 
 $buscarDatos.onclick = function () {
   const $fecha = document.querySelector('#fecha').value;
@@ -29,11 +29,11 @@ $buscarDatos.onclick = function () {
   fetch(`${URL}/${$fecha}?from=${$moneda}`)
     .then((respuesta) => respuesta.json())
     .then((respuestaJSON) => {
-      $('#datos-solicitados').text(
+      $('#moneda-fecha-solicitados').text(
         `Cambios del día ${respuestaJSON.date} en base ${respuestaJSON.base}`
       );
       Object.keys(respuestaJSON.rates).forEach((moneda) => {
-        $('#lista-datos').append(
+        $('#lista-moneda-fecha-solicitado').append(
           $(`<li>${moneda}: ${respuestaJSON.rates[moneda]}</li>`)
         );
       });
