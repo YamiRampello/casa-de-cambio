@@ -37,3 +37,7 @@ html {
   font-size: small;
   display: inline;
 }
+
+.error {
+  border: 2px solid red;
+}
